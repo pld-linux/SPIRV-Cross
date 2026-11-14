@@ -1,0 +1,11 @@
+--- SPIRV-Cross/CMakeLists.txt~	2026-11-14 10:31:59.000000000 +0100
++++ SPIRV-Cross/CMakeLists.txt	2026-11-14 10:59:08.693800825 +0100
+@@ -205,7 +205,7 @@
+ 			ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+ 			PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/spirv_cross)
+ 		install(FILES ${hdrs} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/spirv_cross)
+-		install(EXPORT ${config_name}Config DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/${config_name}/cmake)
++		install(EXPORT ${config_name}Config DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/cmake/${config_name})
+ 		export(TARGETS ${name} FILE ${config_name}Config.cmake)
+ 	endif()
+ endmacro()
